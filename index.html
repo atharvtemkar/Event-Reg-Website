@@ -41,8 +41,12 @@
         <!-- Second row (book a table)-->
         <div class="row" style="text-align: left; margin-left: 1rem;">
             <div class="col-md-6">
-                <button class="btn btn-outline-primary btn-lg" type="button" style="text-align: center; max-width: 300px; margin: 20px auto;" onclick="fun1('fillformdiv')">Reserve a Table</button>
-                <!--onclick="document.getElementById('fillform').style.display='block'"-->
+              <button class="btn btn-outline-primary btn-lg" type="button" style="text-align: center; max-width: 300px; margin: 20px auto;" onclick="fun1('fillformdiv')">Reserve a Table</button>
+              <!--onclick="document.getElementById('fillform').style.display='block'"-->
+            </div>
+            <!-- Contact us section -->
+            <div class="col-md-6">
+              <button class="btn btn-outline-warning btn-lg" type="button" style="text-align: center; max-width: 300px; margin: 20px auto;" onclick="fun1('contactdiv')">Contact Us</button>
             </div>
         </div>
         <!-- end row -->
@@ -55,7 +59,7 @@
         <!-- end row -->
         
         <div class="row" id= "fillformdiv" style="text-align: left; margin-left: 1rem; color: rgb(202, 113, 39); display: none;">
-        <form class="bd-example" id= "fillform">
+          <form class="bd-example" id= "fillform">
             <fieldset>
               <!-- <h4>Fill this Form</h4> -->
               <p style="padding: 12px; font-size: 26px;color: white;">↓ Fill This Form ↓</p>
@@ -146,9 +150,16 @@
                 <button type="submit" disabled="">Button submit</button>
               </p>-->
             </fieldset>
-        </form>
-      </div>
+          </form>
+        </div>
 
+      <!-- Contact details block -->
+
+      <div class="row" id= "contactdiv" style="text-align: left; color: rgb(202, 113, 39); margin-left: 1rem; display:none;">
+        <h2 style="margin-left: 1rem;">Contact Us:</h2><br>
+        <p style="font-size: 22px; margin-left: 2rem;"> Phone: 9876543210 </p>
+        <p style="font-size: 22px; margin-left: 2rem;">Email: <a href="mailto:astemkar@mitaoe.ac.in" style="font-size: 26px;">astemkar@mitaoe.ac.in</a> </p>
+      </div>
       <!--Table starts here -->
 
       <div class="row" id= "resvtablediv" style="text-align: left; margin-left: 1rem; display:none;">

@@ -1,9 +1,11 @@
 function fun1(id) {
     var x = document.getElementById("fillformdiv");
     var y = document.getElementById("resvtablediv");
-      
+    var z = document.getElementById("contactdiv")
+
     x.style.display = "none";
     y.style.display = "none";
+    z.style.display = "none";
 
     document.getElementById(id).style.display = "block";
     
