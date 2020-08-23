@@ -1,4 +1,4 @@
-let data;
+
 
 function fun1(id) {
     var x = document.getElementById("fillformdiv");
@@ -122,6 +122,8 @@ function reservefun(){
         alert(validation());
     }
 }
+
+let data;
 
 $(document).ready(async () => {
   data = (await $.get("https://davids-restaurant.herokuapp.com/menu_items.json")).menu_items;
