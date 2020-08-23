@@ -1,17 +1,21 @@
+let data;
+
 function fun1(id) {
     var x = document.getElementById("fillformdiv");
     var y = document.getElementById("resvtablediv");
-    var z = document.getElementById("contactdiv")
+    var z = document.getElementById("contactdiv");
+    var s = document.getElementById("sponsoreddiv")
 
     x.style.display = "none";
     y.style.display = "none";
     z.style.display = "none";
+    s.style.display = "none";
 
     document.getElementById(id).style.display = "block";
     
 }
 
-  function validation(){
+function validation(){
     resname = document.getElementById("resname"),
     username = document.getElementById("username").value,
     seats = document.getElementById("seats"),
@@ -57,7 +61,7 @@ function fun1(id) {
   return true;
 }
 
-  function reservefun(){
+function reservefun(){
     if(validation() == true) {
         alert("Reserving a Table");
 
@@ -113,9 +117,35 @@ function fun1(id) {
         document.getElementById("reg").reset();
         selectedRowToInput();
         document.getElementById("reg").reset();
-        
-   }
-   else {
-       alert(validation());
-   }
+    }
+    else {
+        alert(validation());
+    }
 }
+
+$(document).ready(async () => {
+  data = (await $.get("https://davids-restaurant.herokuapp.com/menu_items.json")).menu_items;
+  
+  for (const name of data.map(dish => dish.name)) {
+      $("#menu").append(`<option value="${name}">${name}</option>`)
+  }
+
+  data.push({
+      id: "No Data",
+      short_name: "No Data",
+      name: "No Data",
+      description: "No Data",
+      price_small: "No Data",
+      price_large: "No Data",
+      small_portion_name: "No Data",
+      large_portion_name: "No Data"
+  })
+});
+
+$("#menu").on('change', function() {
+  let dish = data.find(d => d.name === this.value);
+
+  for (const [field, value] of Object.entries(dish)) {
+      $(`#${field}`).html(value);
+  }
+})
