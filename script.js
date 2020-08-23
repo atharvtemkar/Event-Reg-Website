@@ -1,5 +1,3 @@
-
-
 function fun1(id) {
     var x = document.getElementById("fillformdiv");
     var y = document.getElementById("resvtablediv");

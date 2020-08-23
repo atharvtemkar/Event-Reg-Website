@@ -5,9 +5,10 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="script.js"></script> 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+    <script defer src="script.js"></script>
+
     <title> PC EATS </title>
 
     <style type="text/css">
@@ -61,7 +62,7 @@
             </div>
             <!-- Sponsored Resaurants section -->
             <div class="col-md-6">
-              <button class="btn btn-outline-warning btn-lg" type="button" style="text-align: center; max-width: 300px; margin: 20px auto;" onclick="fun1('sponsoreddiv')">Sponsored Resaurant</button>
+              <button class="btn btn-outline-warning btn-lg" type="button" style="text-align: center; max-width: 300px; margin: 20px auto;" onclick="fun1('sponsoreddiv')">Sponsored Restaurant</button>
             </div>
         </div>
         <!-- end row -->
@@ -84,7 +85,7 @@
                   <optgroup label="Non-Veg">
                     <option value="">Pizza Breaks</option> 
                     <option value="">Burger Sizzles</option>
-                    <option value="">shawarma Kings</option>
+                    <option value="">Shawarma Kings</option>
                   </optgroup>
                 </select>
               </p>
@@ -189,47 +190,47 @@
       <div class="row" id= "sponsoreddiv" style="text-align: left; margin-left: 1rem; color: rgb(202, 113, 39); display: none;">
         <form>
           <div class="form-group">
-              <label for="menu"><h4>All Available Dishes</h4></label>
+              <label for="menu"><h4>All Available Dishes at Shawarma Kings</h4></label>
               <select id="menu" class="form-control">
                   <option value="No Data">_-_-_ ↓ Select a Dish ↓ _-_-_</option>
               </select>
           </div>
       </form>
       <br>
-      <table class="table" style="color: rgb(202, 113, 39); font-size: 18px;">
-	  <tbody>
-               <tr>
+        <table class="table" style="color: rgb(202, 113, 39); font-size: 18px;">
+            <tbody>
+                <tr>
                     <th scope="row">ID: </th>
                     <td id="id">No Data</td>
-               </tr>
-               <tr>
+                </tr>
+                <tr>
                     <th scope="row">Short Name: </th>
                     <td id="short_name">No Data</td>
-               </tr>
-               <tr>
+                </tr>
+                <tr>
                     <th scope="row">Name: </th>
                     <td id="name">No Data</td>
-               </tr>
-               <tr>
+                </tr>
+                <tr>
                     <th scope="row">Description: </th>
                     <td id="description">No Data</td>
-               </tr>
-               <tr>
+                </tr>
+                <tr>
                     <th scope="row">Price (Small): </th>
                     <td id="price_small">No Data</td>
-               </tr>
-               <tr>
+                </tr>
+                <tr>
                     <th scope="row">Price (Large): </th>
                     <td id="price_large">No Data</td>
-               </tr>
-               <tr>
+                </tr>
+                <tr>
                     <th scope="row">Portion (Small): </th>
                     <td id="small_portion_name">No Data</td>
-               </tr>
-               <tr>
+                </tr>
+                <tr>
                     <th scope="row">Portion (Large): </th>
                     <td id="large_portion_name">No Data</td>
-               </tr>
+                </tr>
             </tbody>
         </table>
       </div>
